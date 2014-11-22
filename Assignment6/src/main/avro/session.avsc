@@ -1,0 +1,90 @@
+{"namespace": "com.refactorlabs.cs378",
+  "type": "record",
+  "name": "Session",
+  "fields": [
+      {"name": "user_id", "type": "string"},
+      {"name": "api_key", "type": "string"},
+      // Add additional session fields here
+      {
+          "name": "activex", 
+          "type": {
+                    "type": "enum",
+                    "name": "ActiveX",
+                    "symbols": [ "ENABLED", "NOT_SUPPORTED" ],
+                    "default": "NOT_SUPPORTED"
+                  },
+          "default": "NOT_SUPPORTED"
+      },
+      {"name": "resolution", "type": "string"},
+      {"name": "user_agent", "type": "string"},
+      {"name": "impressions",
+       "type": {
+                  "type": "array",
+                  "items": {
+                              "type": "record",
+                              "name": "Impression",
+                              "fields": [
+                                  {"name": "impression_type",
+                                   "type": {"type": "enum", "name": "ImpressionType",
+                                            "symbols": [ "ACTION", "VDP", "SRP" ],
+                                            "default": "SRP"
+                                           },
+                                    "default": "SRP"
+                                           
+                                   },
+                                  {"name": "action",
+                                   "type": {"type": "enum", "name": "Action",
+                                            "symbols": [ "CLICK", "PAGE_VIEW" ],
+                                            "default": "PAGE_VIEW"
+                                           },
+                                    "default": "PAGE_VIEW"
+                                           
+                                  },
+                                  // Add additional impression fields here
+                                  {"name": "action_name",
+                                   "type": {"type": "enum", "name": "ActionName",
+                                            "symbols": [ "VIEWED_CARFAX_REPORT", "MORE_PHOTOS_VIEWED", "VIEWED_CARFAX_REPORT_UNHOSTED", "DEALER_PAGE_VIEWED",
+                                            "DEALER_WEBSITE_VIEWED", "NONE" ],
+                                            "default": "NONE"
+                                           },
+                                    "default": "NONE"
+                                           
+                                   },
+                                   {"name": "phone_type",
+                                   "type": {"type": "enum", "name": "PhoneType",
+                                            "symbols": [ "TRACKED", "NONE" ],
+                                            "default": "NONE"
+                                           },
+                                    "default": "NONE"   
+                                   },
+                                   {"name": "vertical",
+                                   "type": {"type": "enum", "name": "Vertical",
+                                            "symbols": [ "CARS", "NONE" ],
+                                            "default": "NONE"
+                                           },
+                                    "default": "NONE"
+                                   },
+                                   {"name": "id",
+                                   "type": ["null", {"type": "array",
+                                                    "items": "long"
+                                                    }
+                                            ],
+                                    "default": null    
+                                    },
+                                    {"name": "city", "type": ["null", "string"], "default": null },
+                                    {"name": "ab", "type": ["null", "string"], "default": null },
+                                    {"name": "state", "type": ["null", "string"], "default": null },
+                                    {"name": "zip", "type": ["null", "string"], "default": null },
+                                    {"name": "address", "type": ["null", "string"], "default": null },
+                                    {"name": "domain", "type": ["null", "string"], "default": null },
+                                    {"name": "start_index", "type": "long", "default": 0}, 
+                                    {"name": "total", "type": "long", "default": 0}, 
+                                    {"name": "timestamp", "type": "long"},
+                                    {"name": "lon", "type": "double", "default":0.0}, 
+                                    {"name": "lat", "type": "double", "default":0.0}
+                              ]
+                          }
+               }
+      }
+  ]
+}

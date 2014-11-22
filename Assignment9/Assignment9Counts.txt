@@ -1,0 +1,24 @@
+First run:
+	31 Assignment9Bouncer.txt
+    55 Assignment9Browser.txt
+    42 Assignment9Searcher.txt
+    11 Assignment9Submitter.txt
+    139 total
+Second run:
+	27 Assignment9Bouncer.txt
+    59 Assignment9Browser.txt
+    38 Assignment9Searcher.txt
+    11 Assignment9Submitter.txt
+    135 total
+Third run:
+	28 Assignment9Bouncer.txt
+    53 Assignment9Browser.txt
+    42 Assignment9Searcher.txt
+    11 Assignment9Submitter.txt
+    134 total
+Fourth run:
+	31 Assignment9Bouncer.txt
+    38 Assignment9Browser.txt
+    42 Assignment9Searcher.txt
+    11 Assignment9Submitter.txt
+    122 total

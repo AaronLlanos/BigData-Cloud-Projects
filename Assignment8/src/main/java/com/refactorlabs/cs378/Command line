@@ -1,0 +1,7 @@
+s3://utcs378/al26593/jars/bdp-1.7.jar
+
+com.refactorlabs.cs378.UserSessions
+s3n://utcs378/data/dataSet8Impressions.txt
+s3n://utcs378/data/dataSet8Leads.txt
+s3://utcs378/al26593/output/assignment8-5
+s3n://utcs378/data/dataSet8Zip2Dma.txt

@@ -1,0 +1,7 @@
+com/refactorlabs/cs378/WordStatistics$MapClass.class
+com/refactorlabs/cs378/WordStatistics.class
+com/refactorlabs/cs378/WordStatisticsAggregator$MapClass.class
+com/refactorlabs/cs378/WordStatisticsAggregator$ReduceClass.class
+com/refactorlabs/cs378/WordStatisticsWritable.class
+com/refactorlabs/cs378/WordStatisticsAggregator.class
+com/refactorlabs/cs378/WordStatistics$ReduceClass.class

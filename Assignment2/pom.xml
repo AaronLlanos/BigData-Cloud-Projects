@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.refactorlabs.cs378</groupId>
+    <artifactId>bdp</artifactId>
+    <packaging>jar</packaging>
+    <version>1.1</version>
+
+    <description>Java code for CS 378 - Big Data Programming</description>
+
+    <properties>
+      <!-- AWS designation: - - ami-version 2.4.5 -->
+      <hadoop-core.version>1.0.3</hadoop-core.version>
+      <!-- guava collections version -->
+      <guava.version>18.0</guava.version>
+    </properties>
+
+    <developers>
+        <developer>
+            <name>David Franke</name>
+            <email>dfranke@cs.utexas.edu</email>
+            <id>dfranke</id>
+        </developer>
+    </developers>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
+            <version>${hadoop-core.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>${guava.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>3.1</version>
+              <configuration>
+                  <source>1.6</source>
+                  <target>1.6</target>
+              </configuration>
+          </plugin>
+
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-jar-plugin</artifactId>
+              <version>2.5</version>
+              <configuration>
+                  <archive>
+                      <manifest>
+                          <mainClass>com.refactorlabs.cs378.WordStatistics</mainClass>
+                      </manifest>
+                  </archive>
+              </configuration>
+          </plugin>
+
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-shade-plugin</artifactId>
+              <version>2.3</version>
+	      <executions>
+		<execution>
+		  <phase>package</phase>
+		  <goals>
+		    <goal>shade</goal>
+		  </goals>
+		  <configuration>
+		    <artifactSet>
+		      <excludes>
+		      </excludes>
+		    </artifactSet>
+		  </configuration>
+		</execution>
+	      </executions>
+          </plugin>
+
+      </plugins>
+    </build>
+
+</project>
