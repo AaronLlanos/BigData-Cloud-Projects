@@ -1,0 +1,10 @@
+com/refactorlabs/cs378/utils/NumericArrayWritable.class
+com/refactorlabs/cs378/WordStatistics$MapClass.class
+com/refactorlabs/cs378/WordStatistics.class
+com/refactorlabs/cs378/WordStatistics$RandomInputFormat.class
+com/refactorlabs/cs378/WordStatisticsAggregator$MapClass.class
+com/refactorlabs/cs378/WordStatisticsReducer.class
+com/refactorlabs/cs378/WordStatisticsWritable.class
+com/refactorlabs/cs378/WordStatistics$FakeInputSplit.class
+com/refactorlabs/cs378/WordStatisticsAggregator.class
+com/refactorlabs/cs378/WordStatistics$RandomRecordReader.class

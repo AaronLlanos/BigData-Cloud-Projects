@@ -1,0 +1,126 @@
+{"namespace": "com.refactorlabs.cs378.sessions",
+  "type": "record",
+  "name": "Session",
+  "fields": [
+      {"name": "user_id", "type": "string"},
+      {"name": "api_key", "type": "string"},
+      {"name": "user_agent", "type": [ "string", "null" ], "default": "null"},
+      {"name": "resolution", "type": [ "string", "null" ], "default": "null"},
+      {"name": "activex", 
+      "type": {"type": "enum",
+               "name": "ActiveX",
+               "symbols": [ "ENABLED", "NOT_SUPPORTED", "DISABLED"],
+               "default": "NOT_SUPPORTED"
+               },
+      "default": "NOT_SUPPORTED"
+      },
+      {"name": "impressions",
+       "type": {"type": "array",
+                "items": {"type": "record",
+                          "name": "Impression",
+                          "fields": [
+                              {"name": "impression_type",
+                               "type": {"type": "enum",
+                                        "name": "ImpressionType",
+                                        "symbols": [ "ACTION", "VDP", "SRP", "THANK_YOU" ],
+                                        "default": "SRP"
+                                       },
+                               "default": "SRP"
+                               },
+                              {"name": "action",
+                               "type": {"type": "enum", "name": "Action",
+                                        "symbols": [ "CLICK", "PAGE_VIEW" ],
+                                        "default": "PAGE_VIEW"
+                                       },
+                                "default": "PAGE_VIEW"
+                              },
+                              {"name": "action_name",
+                               "type": {"type": "enum", "name": "ActionName",
+                                        "symbols": [ "VIEWED_CARFAX_REPORT",
+                                                     "VIEWED_CARFAX_REPORT_UNHOSTED",
+                                                     "VEHICLE_AT_DEALER_PAGE_VIEWED",
+                                                     "MAP_DEALER_LOCATION",
+                                                     "PRINT_VEHICLE_DETAIL",
+                                                     "MORE_PHOTOS_VIEWED",
+                                                     "DEALER_PAGE_VIEWED",
+                                                     "DEALER_WEBSITE_VIEWED",
+                                                     "UNKNOWN",
+                                                     "NONE"
+                                                   ],
+                                        "default": "NONE"
+                                       },
+                                "default": "NONE"
+                              },
+                              {"name": "id",
+                               "type": ["null", {"type": "array", "items": "long"} ],
+                               "default": null    
+                              },
+                              {"name": "timestamp", "type": "long", "default": 0},
+                              {"name": "ab", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "vertical",
+                               "type": {"type": "enum", "name": "Vertical",
+                                        "symbols": [ "CARS", "OTHER" ],
+                                        "default": "CARS"
+                                       },
+                                "default": "CARS"
+                              },
+                              {"name": "start_index", "type": "int", "default": 0},
+                              {"name": "total", "type": "int", "default": 0},
+                              {"name": "domain", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "lat", "type": "double", "default": 0.0 },
+                              {"name": "lon", "type": "double", "default": 0.0 },
+                              {"name": "address", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "dma", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "city", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "zip", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "state", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "phone_type",
+                               "type": {"type": "enum", "name": "PhoneType",
+                                        "symbols": [ "TRACKED", "NONE" ],
+                                        "default": "NONE"
+                                       },
+                                "default": "NONE"   
+                               }
+                          ]
+                         }
+               }
+      },
+      {"name": "leads",
+       "type": {"type": "array",
+                "items": {"type": "record",
+                          "name": "Lead",
+                          "fields": [
+                              {"name": "lead_id", "type": "long", "default": 0 },
+                              {"name": "type",
+                               "type": {"type": "enum", 
+                                        "name": "LeadType",
+                                        "symbols": [ "GOOD", "DUPLICATE", "RANGE", "ERROR", "BAD" ],
+                                        "default": "BAD"
+                                        },
+                                "default": "BAD"
+                              },
+                              {"name": "bid_type",
+                               "type": {"type": "enum", "name": "BidType",
+                                        "symbols": [ "LEAD", "SALE", "OTHER" ],
+                                        "default": "LEAD"
+                                        },
+                                "default": "LEAD"
+                              },
+                              {"name": "advertiser", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "campaign_id", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "id", "type": "long", "default": 0},
+                              {"name": "amount", "type": "float", "default": 0.0},
+                              {"name": "revenue", "type": "float", "default": 0.0},
+                              {"name": "customer_zip", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "customer_dma", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "vehicle_zip", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "vehicle_dma", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "test", "type": "boolean", "default": "false"},
+                              {"name": "ab", "type": [ "string", "null" ], "default": "null" },
+                              {"name": "vdp_index", "type": "int", "default": -1}
+                          ]
+                         }
+               }
+      }
+      ]
+}

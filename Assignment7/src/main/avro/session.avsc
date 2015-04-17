@@ -81,43 +81,6 @@
                           ]
                          }
                }
-      },
-      {"name": "leads",
-       "type": {"type": "array",
-                "items": {"type": "record",
-                          "name": "Lead",
-                          "fields": [
-                              {"name": "lead_id", "type": "long", "default": 0 },
-                              {"name": "type",
-                               "type": {"type": "enum", 
-                                        "name": "LeadType",
-                                        "symbols": [ "GOOD", "DUPLICATE", "RANGE", "ERROR", "BAD" ],
-                                        "default": "BAD"
-                                        },
-                                "default": "BAD"
-                              },
-                              {"name": "bid_type",
-                               "type": {"type": "enum", "name": "BidType",
-                                        "symbols": [ "LEAD", "SALE", "OTHER" ],
-                                        "default": "LEAD"
-                                        },
-                                "default": "LEAD"
-                              },
-                              {"name": "advertiser", "type": [ "string", "null" ], "default": "null" },
-                              {"name": "campaign_id", "type": [ "string", "null" ], "default": "null" },
-                              {"name": "id", "type": "long", "default": 0},
-                              {"name": "amount", "type": "float", "default": 0.0},
-                              {"name": "revenue", "type": "float", "default": 0.0},
-                              {"name": "customer_zip", "type": [ "string", "null" ], "default": "null" },
-                              {"name": "customer_dma", "type": [ "string", "null" ], "default": "null" },
-                              {"name": "vehicle_zip", "type": [ "string", "null" ], "default": "null" },
-                              {"name": "vehicle_dma", "type": [ "string", "null" ], "default": "null" },
-                              {"name": "test", "type": "boolean", "default": "false"},
-                              {"name": "ab", "type": [ "string", "null" ], "default": "null" },
-                              {"name": "vdp_index", "type": "int", "default": -1}
-                          ]
-                         }
-               }
       }
       ]
 }

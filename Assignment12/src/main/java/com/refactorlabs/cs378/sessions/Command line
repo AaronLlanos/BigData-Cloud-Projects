@@ -1,0 +1,12 @@
+s3://utcs378/al26593/jars/bdp-1.11.jar
+
+com.refactorlabs.cs378.sessions.UserSessions 
+s3n://utcs378/data/dataSet12small/part-r-00000.avro
+s3n://utcs378/data/dataSet12small/recordIdPrice.txt
+s3://utcs378/al26593/output/assignment12-3-0
+
+
+com.refactorlabs.cs378.sessions.UserSessions 
+s3n://utcs378/data/dataSet12large/part-r-00000.avro
+s3n://utcs378/data/dataSet12large/recordIdPrice.txt
+s3://utcs378/al26593/output/assignment12-3-0
